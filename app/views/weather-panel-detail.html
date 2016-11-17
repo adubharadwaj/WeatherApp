@@ -1,0 +1,163 @@
+<div class="container">
+    <div class="row">
+        <h3>{{parseDate(useDayForecast.dt) | date:'fullDate'}}</h3>
+    </div>
+</div>
+<div class="center">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="weather panel panel-info">
+                <div class="panel-heading">MORNING</div>
+                <div class="panel-body">
+                    <div>
+                        <p class="lead">
+                            <img ng-src="{{getIconImageUrl(useDayForecast.weather[0].icon)}}" /> {{useDayForecast.temp.morn | number:1}}&#176;F
+                        </p>
+                        <p>
+                            {{useDayForecast.weather[0].description}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="weather panel panel-info">
+                <div class="panel-heading">DAY</div>
+                <div class="panel-body">
+                    <div>
+                        <p class="lead">
+                            <img ng-src="{{getIconImageUrl(useDayForecast.weather[0].icon)}}" /> {{useDayForecast.temp.day | number:1}}&#176;F
+                        </p>
+                        <p>
+                            {{useDayForecast.weather[0].description}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="weather panel panel-info">
+                <div class="panel-heading">EVENING</div>
+                <div class="panel-body">
+                    <div>
+                        <p class="lead">
+                            <img ng-src="{{getIconImageUrl(useDayForecast.weather[0].icon)}}" /> {{useDayForecast.temp.eve | number:1}}&#176;F
+                        </p>
+                        <p>
+                            {{useDayForecast.weather[0].description}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="weather panel panel-info">
+                <div class="panel-heading">NIGHT</div>
+                <div class="panel-body">
+                    <div>
+                        <p class="lead">
+                            <img ng-src="{{getIconImageUrl(useDayForecast.weather[0].icon)}}" /> {{useDayForecast.temp.night | number:1}}&#176;F
+                        </p>
+                        <p>
+                            {{useDayForecast.weather[0].description}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="weather panel panel-info">
+                <div class="panel-heading">HIGH</div>
+                <div class="panel-body">
+                    <div>
+                        <p>
+                            {{useDayForecast.temp.max}}&#176;F
+                            <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="weather panel panel-info">
+                <div class="panel-heading">LOW</div>
+                <div class="panel-body">
+                    <div>
+                        <p>
+                            {{useDayForecast.temp.min}}&#176;F
+                            <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="weather panel panel-info">
+                <div class="panel-heading">PRESSURE</div>
+                <div class="panel-body">
+                    <div>
+                        <p>
+                            {{useDayForecast.pressure}}&nbsp;hPa
+                            <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="weather panel panel-info">
+                <div class="panel-heading">HUMIDITY</div>
+                <div class="panel-body">
+                    <div>
+                        <p>
+                            {{useDayForecast.humidity}}%
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="weather panel panel-info">
+                <div class="panel-heading">WIND SPEED</div>
+                <div class="panel-body">
+                    <div>
+                        <p>
+                            {{useDayForecast.speed}}&nbsp;mph
+                            <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="weather panel panel-info">
+                <div class="panel-heading">WIND DIRECTION</div>
+                <div class="panel-body">
+                    <div>
+                        <p>
+                            {{useDayForecast.deg}}&nbsp;deg
+                            <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="weather panel panel-info">
+                <div class="panel-heading">CLOUD COVERAGE</div>
+                <div class="panel-body">
+                    <div>
+                        <p>
+                            {{useDayForecast.clouds}}&nbsp;%
+                            <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

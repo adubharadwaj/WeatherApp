@@ -1,0 +1,22 @@
+/* Styling of div tags */
+
+.weather.panel .panel-heading {
+    font-weight: lighter !important;
+    font-size: 15px;
+}
+
+.weather.panel .panel-footer {
+    font-weight: lighter !important;
+}
+
+.center {
+    text-align: center;
+}
+
+.panel-footer{
+	text-align: center;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #fff;
+}

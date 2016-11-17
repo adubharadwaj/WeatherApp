@@ -1,0 +1,34 @@
+<div class="weather-search">
+    <div class="col-sm-12">
+        <div>
+            <form class="form-inline" role="form">
+                <span class="btn-group">
+                            <button ng-repeat="item in vm.exampleLocations" ng-click="vm.setLocation(item)" type="submit" class="btn btn-default">{{item}}</button>
+                        </span>
+                <span class="form-group {{vm.hasState}}">
+                            <label class="sr-only" for="vm.location">City</label>
+                            <input ng-model="vm.location" type="text" class="form-control" id="location" placeholder="City">
+                        </span>
+                <button ng-click="vm.getForecastByLocation(location)" type="submit" class="btn btn-primary">Search!</button>
+                <span ng-show="vm.message" class="alert"><span class="glyphicon glyphicon-arrow-left">&nbsp;</span>{{message}}</span>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="weather-data" ng-show="true">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="">
+                <h3>
+                        {{vm.forecast.city.name | placeholder:'?'}}, {{vm.forecast.city.country | isoCountry}}
+                        <small>Lon: {{vm.forecast.city.coord.lon | number:2}} Lat: {{vm.forecast.city.coord.lat | number:2}}</small>
+                    </h3>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div current-panel="forecast" show-entry="vm.forecast.list[0]"></div>
+        </div>
+    </div>
+</div>
